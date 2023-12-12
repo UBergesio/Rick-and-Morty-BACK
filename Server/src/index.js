@@ -22,7 +22,7 @@ server.use(express.json())
 server.use('/rickandmorty', router)
 
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 conn.sync({ force: true }).then(() => {
   server.listen(PORT, () => {
